@@ -22,3 +22,20 @@ p {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+#noti1{
+  animation: appear .5s 1;
+}
+@keyframes appear {
+  from{
+    scale: -1;
+  }
+  to{
+    scale: 1;
+  }
+  
+}
+.active {
+  color: #f24137;
+  background-color: #f2413721;
+  box-shadow: 0px 5px 20px #00000018;
+}
