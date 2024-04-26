@@ -1,31 +1,39 @@
 import { useState, useRef } from "react";
-import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaApple } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-
+import G_auth_Btn from "../components/G_auth_Btn";
+import Success from "../components/notification/Success";
 const Login = () => {
   // const [form, setform] = useState({});
+  const [islogin,setislogin]=useState(false)
   const signup = async () => {};
   const password = useRef();
   const styleIcon = "text-4xl";
-  const signupwith = [
+  const loginwith = [
     {
       icon: <BsFacebook className={styleIcon} />,
-      link: "https://safety.google/authentication/",
+      action: () => {
+        console.log("login initiated");
+      },
     },
     {
-      icon: <FcGoogle className={styleIcon} />,
-      link: "https://safety.google/authentication/",
+      icon: <G_auth_Btn  setislogin={setislogin} />,
+      action: () => {
+        console.log("login initiated");
+      },
     },
     ,
     {
       icon: <FaApple className={styleIcon} />,
-      link: "https://safety.google/authentication/",
+      action: () => {
+        console.log("login initiated");
+      },
     },
   ];
   return (
     <div className="min-h-[80vh] w-full flex flex-col items-center justify-center">
+      {islogin?<Success notification={"login successful"} />:""}
       <h1 className="text-4xl mb-12">Sign In</h1>
       <div className="md:w-[70%] min-w-fit max-w-[40em] text-[#292D32] grid">
         <div className="grid">
@@ -83,11 +91,11 @@ const Login = () => {
           Or register with
         </h3>
         <div className="flex justify-center mt-1">
-          {signupwith.map(({ icon, link }) => {
+          {loginwith.map(({ icon, action }) => {
             return (
-              <a key={icon} href={link} className="mx-2">
+              <button key={icon} className="mx-2">
                 {icon}
-              </a>
+              </button>
             );
           })}
         </div>

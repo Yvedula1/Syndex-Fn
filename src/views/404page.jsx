@@ -1,4 +1,3 @@
-import React from 'react'
 import notFoundImg from "../assets/404.svg"
 function NotFoundPage() {
   return (
