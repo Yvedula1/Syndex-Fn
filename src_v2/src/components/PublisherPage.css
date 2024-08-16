@@ -1,0 +1,17 @@
+.publisherPage {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .publisherPage__body {
+    display: flex;
+  }
+  .suggested-topics {
+    width: 20%;
+    padding: 20px;
+  }  
+  .sidebar {
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }

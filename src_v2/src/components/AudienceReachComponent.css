@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/futur.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Futura', sans-serif;
+}
+
+.reach-audience-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .red-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between buttons */
+    margin-top: 10px;
+  }
+  
+  .red-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  min-width: 40px;
+  }
+  
+  
+  
